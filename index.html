@@ -52,14 +52,14 @@
         <video class="absolute max-lg:hidden object-center object-cover size-full" src="https://videos.ctfassets.net/wl6q2in9o7k3/5gq9kL03XTsk74SCqXxr1U/3d169a089278fa02fb9cba42759b2d85/CBUM_AGC_WEB_BANNER_8MB.mp4" autoplay loop muted playsinline></video>
         <div class="absolute inset-0 bg-gradient-to-t from-[#0E1012] to-transparent"></div>
 
-        <div class="absolute inset-0 flex flex-col justify-center sm:items-center px-6">
+        <div class="absolute inset-0 flex flex-col justify-center sm:items-center px-4">
             <p class="font-semibold font-teko text-5xl text-white sm:text-6xl sm:text-center lg:text-8xl">SUA JORNADA</p>
             <p class="font-semibold font-teko text-5xl text-white sm:text-6xl sm:text-center lg:text-8xl">FITNESS COMEÇA AGORA</p>
             <p class="max-w-3xl text-gray-300 sm:text-center lg:text-lg mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum ullam architecto unde earum. Totam mollitia quo quam quibusdam delectus placeat, ullam possimus harum officiis. Quasi vel et dolorum ab dolor.</p>
-            <button class="w-fit font-semibold text-white tracking-wide bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 mt-8 px-8 py-2">Comece agora</button>
+            <button class="w-fit font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 mt-10 px-8 py-2">Comece agora</button>
         </div>
 
-        <div class="absolute inset-x-0 max-w-7xl mx-auto px-6 py-8">
+        <div class="absolute inset-x-0 max-w-7xl mx-auto px-4 py-8">
             <div class="flex justify-between items-center">
                 <img class="w-20 lg:w-24 lg:mr-6" src="arquivos/logo.webp" loading="lazy" alt="logo">
                 <div class="flex items-center max-lg:hidden bg-white/20 rounded-lg">
@@ -69,13 +69,13 @@
                     <button class="font-medium text-sm text-white hover:text-blue-600 hover:bg-white rounded-lg duration-300 px-8 py-3" @click="scroll_element('faq')">Dúvidas</button>
                 </div>
                 <a class="flex items-center gap-2 max-lg:hidden bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 px-6 py-2" href="">
-                    <span class="font-semibold text-sm text-white tracking-wide">Entrar</span>
+                    <span class="font-semibold text-sm text-white">Entrar</span>
                     <svg class="text-white size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
                 </a>
                 <button class="lg:hidden" @click="sidebar = true">
-                    <svg class="text-white size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <svg class="text-white size-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                     </svg>
                 </button>
@@ -83,23 +83,23 @@
         </div>
 
         <div class="z-40 fixed inset-0 bg-black bg-opacity-50" x-show="sidebar" @click="sidebar = false" x-transition.opacity.duration.500ms x-cloak></div>
-        <div :class="{ '-translate-x-64': sidebar }" class="top-0 -right-64 z-50 fixed space-y-4 w-64 h-full bg-white duration-500 p-6">
-            <div class="flex justify-between items-center text-gray-800">
-                <p class="font-semibold font-teko text-4xl tracking-wide">Menu</p>
+        <div :class="{ '-translate-x-64': sidebar }" class="top-0 -right-64 z-50 fixed space-y-3 w-64 h-full bg-[#212121] duration-500 p-6">
+            <div class="flex justify-between items-center">
+                <p class="font-semibold font-teko text-4xl text-white">Menu</p>
                 <button @click="sidebar = false">
-                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <svg class="text-white size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
             <div class="flex flex-col">
-                <button class="font-medium text-gray-500 text-sm text-start py-3" @click="scroll_element('advantages'), sidebar = false">Vantagens</button>
-                <button class="font-medium text-gray-500 text-sm text-start py-3" @click="scroll_element('development'), sidebar = false">Desenvolvimento</button>
-                <button class="font-medium text-gray-500 text-sm text-start py-3" @click="scroll_element('blog'), sidebar = false">Blog</button>
-                <button class="font-medium text-gray-500 text-sm text-start py-3" @click="scroll_element('faq'), sidebar = false">Dúvidas</button>
-                <div class="border-b my-3"></div>
-                <a class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 px-6 py-2" href="">
-                    <span class="font-medium text-sm text-white tracking-wide">Área de membros</span>
+                <button class="font-medium text-gray-300 text-sm text-start py-3" @click="scroll_element('advantages'), sidebar = false">Apresentação</button>
+                <button class="font-medium text-gray-300 text-sm text-start py-3" @click="scroll_element('development'), sidebar = false">Depoimentos</button>
+                <button class="font-medium text-gray-300 text-sm text-start py-3" @click="scroll_element('blog'), sidebar = false">Planos</button>
+                <button class="font-medium text-gray-300 text-sm text-start py-3" @click="scroll_element('faq'), sidebar = false">Dúvidas</button>
+                <div class="border-b my-6"></div>
+                <a class="flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 mt-2 px-6 py-2" href="">
+                    <span class="font-semibold text-sm text-white">Entrar</span>
                     <svg class="text-white size-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M5 12h14M12 5l7 7-7 7"></path>
                     </svg>
@@ -110,7 +110,7 @@
     </div>
 
 
-    <div class="relative gap-6 grid lg:grid-cols-3 max-w-7xl mx-auto -mt-20 max-2xl:px-6">
+    <div class="relative gap-6 grid lg:grid-cols-3 max-w-7xl mx-auto -mt-20 max-2xl:px-4">
         <div class="space-y-8 border-gray-700 border rounded-lg px-10 py-16">
             <div class="w-fit border border-blue-500 rounded-full p-4">
                 <svg class="text-gray-300 size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -154,7 +154,7 @@
             </div>
             <p class="font-bold text-3xl text-white mt-4">Satisfied customers</p>
             <p class="text-gray-300 mt-6 mb-8">So many people have already trusted us. This number is constantly growing thanks to the positive feedback from our customers</p>
-            <button class="font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 px-8 py-2">Comece Agora</button>
+            <button class="font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg duration-300 px-8 py-2">Comece Agora</button>
         </div>
         <div class="col-span-2">
             <img class="w-[600px] h-[450px] rounded rounded-tr-[5rem] ml-auto object-center object-cover" src="https://images.unsplash.com/photo-1434682772747-f16d3ea162c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80" alt="">
@@ -197,7 +197,7 @@
                             <span class="font-semibold text-2xl sm:text-3xl" x-text="subscription.price"></span>
                             <span class="font-medium text-base">/ mês</span>
                         </div>
-                        <button class="w-full font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-md duration-300 mt-6 px-4 py-2">Comece Agora</button>
+                        <button class="w-full font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-md duration-300 mt-6 px-4 py-2">Comece Agora</button>
                     </div>
                     <div class="p-8">
                         <p class="font-medium text-lg text-white lg:text-xl">What’s included:</p>
